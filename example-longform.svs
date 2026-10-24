@@ -1,0 +1,42 @@
+<?svml using="@hypit/recipe@1"?>
+<sheet version="1">
+  film.main { background: #0B0D12; }
+  media.cover { fit: cover; stack-order: 0; }
+  caption.primary {
+    stack-order: 70;
+    x: 0.5;
+    y: 0.84;
+    width: 0.88;
+    height: 0.12;
+    anchor-x: center;
+    anchor-y: bottom;
+    align: center;
+    block-align: end;
+    inline-size: fixed;
+    wrap: word;
+    size: 64;
+    line-height: 1.08;
+    fill: "#F4F1EC";
+    stroke-color: "#0B0D12";
+    stroke-width: 7;
+    shadow-color: "#000000";
+    shadow-opacity: 0.55;
+    shadow-x: 3;
+    shadow-y: 4;
+    shadow-blur: 0;
+    shadow-spread: 0;
+    active-fill: "#FFD54A";
+    background: "#00000000";
+    padding: "0";
+    radius: 0;
+    karaoke: current;
+    karaoke-transition: step;
+    cue-enter: fade;
+    cue-enter-frames: 3;
+    cue-exit: none;
+    cue-exit-frames: 0;
+    lead-frames: 0;
+    tail-frames: 0;
+    handoff: cut;
+  }
+</sheet>

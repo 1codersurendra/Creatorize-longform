@@ -1,0 +1,207 @@
+<?svml using="@hypit/markup@1"?>
+<svml>
+  <import from="@hypit/script@1"/>
+  <import as="text" from="@hypit/text@1"/>
+  <import as="media" from="@hypit/media@1"/>
+  <import as="mediaop" from="@hypit/media-operations@1"/>
+  <import as="whisperx" from="@hypit/whisperx@1"/>
+  <import as="semantic" from="@hypit/narrative-temporal@1"/>
+  <import as="time" from="@hypit/timeline-author@1"/>
+  <import as="visual" from="@hypit/visual-track@1"/>
+  <import as="audio" from="@hypit/audio-track@1"/>
+  <import as="caption" from="@hypit/caption@1"/>
+  <import as="caption-fine" from="@hypit/caption-fine@1"/>
+  <import as="narrative-caption" from="@hypit/narrative-caption@1"/>
+  <import as="fonts" from="@hypit/fontsource@1"/>
+  <import as="space" from="@hypit/spatial@1"/>
+  <import as="film" from="@hypit/film@1"/>
+  <import as="html" from="@hypit/html-video@1"/>
+  <import as="look" source="../recipes/longform.svs"/>
+  <!-- The words. Everything else attaches to these, not to a second. -->
+  <script id="story">
+  <cold-open>
+    <HOST> This channel made forty-eight videos in nine days. Every one of them was written, narrated, illustrated and edited by a pipeline that ran on a laptop. Here is the part that shocked me: it cost eleven dollars and a half.
+  </cold-open>
+  <results>
+    <HOST> I want to be precise about what I mean by a working pipeline, because the word gets thrown around and most of what you will find under it is a script generator with a subscribe button glued to the end. A working pipeline takes a topic and returns a finished, uploadable file. Not a folder of assets. Not a project you still have to edit. A file. The difference matters, and it is the entire reason the rest of this video exists. Once you can point at one command and one finished video, everything else becomes a question of taste instead of a question of whether the tool works at all.
+  </results>
+  <context>
+    <HOST> So let us look at what we are actually comparing. The old way is what I was doing in 2023. You write the script in a document. You record the voice over in a quiet room, and you redrive it if you hate a sentence. You open an editor and place every image, every transition, every caption, every sound effect by hand. For a twelve minute video that is what, eight hours? Twelve hours if you are honest and it is good. Multiply that by a hundred videos and you understand why almost nobody does this. The new way is not a better editor. It is a different shape of work, where the editor stops being a thing you drive and becomes a thing you describe.
+  </context>
+  <setup>
+    <HOST> The project setup is deliberately boring, and that is the point. You create a project, you give it a topic, and you pick a style. The style is not a filter. It is a complete description of how the picture behaves: the palette, the typography, the motion language, how captions appear, how the narrator is framed. Once you have chosen it, everything downstream inherits that choice, which means your hundred videos look like a channel and not like a hundred unrelated clips. This is the step most tutorials skip, and it is the step that decides whether the output looks like you or looks like everyone else.
+  </setup>
+  <scripting>
+    <HOST> Now the script. Here is the part I find genuinely interesting. The system does not just write text. It reads across multiple sources, and then a separate agent reads the draft again and checks every claim against what it found. That second pass is the whole difference between a video that sounds confident and a video that is actually right. Because the failure mode of AI writing is not bad grammar. It is confident, well-paced, specific, and wrong. A separate reviewer catches that, and the script gets a fact-check pass before a single word is narrated.
+  </scripting>
+  <build>
+    <HOST> The voiceover comes next, and you have two honest options. You record it, which gives you something no model can match, because your delivery is part of the product. Or you clone a voice, which is what I do for the videos that are more like explainers than like essays. What I do not do is generate a voice and then pretend the performance was intentional. Once the words are settled, the picture follows them, and the picture is generated. Not every shot. The shots that need to be visual proof. A claim about speed wants a fast action on screen. A claim about a tool wants that tool, running, in the frame. That is the rule I work by, and it is why the finished video does not look like a slideshow of nouns.
+  </build>
+  <verify>
+    <HOST> Quality control is the part I refuse to skip, even when it costs me time. You watch the whole thing, and you look for the specific failures. The caption that overlaps the face. The shot that arrives a second before the sentence needs it. The claim on screen that the voiceover contradicts. You find those, you fix those, and only then do you export. A pipeline that produces ninety percent and needs a human for the last ten percent is worth building. A pipeline that produces ninety percent and calls it done is just a way to publish your mistakes faster.
+  </verify>
+  <case>
+    <HOST> Let me show you that this generalises. The same project, the same style, the same pipeline, produced the three D shorts on this channel, and also produced a flat vector explainer, and also produced a thirty minute documentary. Those are four completely different looking videos, and they did not come from four different tools. The style description is what changes the output, and because the style is a document, you can save the good ones and reuse them. That is the compounding part. Every video you make can leave behind a better style file than the one before it.
+  </case>
+  <output>
+    <HOST> When it works, exporting is the least interesting part. You get the file, you get a title, you get a description, and you get chapters, and the chapters are written from the same structure the video was built from, so they are accurate rather than decorative. The cost is the number people want, so let us be concrete. For the forty-eight videos, eleven dollars of generation credits. Your own Claude subscription covers the writing and the direction, which is where the actual work is. The credits cover images, and the images are the cheap part.
+  </output>
+  <close>
+    <HOST> So here is the whole workflow in one line. You pick a topic, the pipeline researches it, writes it, has it fact-checked, narrates it, builds the picture against the words, and hands you a file you can upload. The only part that is actually you is the taste: which topic, which style, and what you do about the flaws when you find them. If you want the project, the link is in the description. I will see you in the next one.
+  </close>
+</script>
+  <!-- Canvas and clock. -->
+  <space:Canvas id="canvas" width="1920" height="1080"/>
+  <time:Clock id="clock" frame-rate="30"/>
+  <space:Frame id="full" within={canvas.bounds} left="0%" top="0%" right="100%" bottom="100%"/>
+  <!-- Extra prepared material (music bed, stingers, stills). -->
+  <!-- Narration: one slice per section, so each section knows its own length. -->
+  <media:Audio id="narration-cold-open" src="../assets/narration/cold-open.m4a"/>
+  <mediaop:Normalize id="narration-cold-open-media" source={narration-cold-open} clock={clock} video="none" audio="default" span-authority="audio"/>
+  <media:Audio id="narration-results" src="../assets/narration/results.m4a"/>
+  <mediaop:Normalize id="narration-results-media" source={narration-results} clock={clock} video="none" audio="default" span-authority="audio"/>
+  <media:Audio id="narration-context" src="../assets/narration/context.m4a"/>
+  <mediaop:Normalize id="narration-context-media" source={narration-context} clock={clock} video="none" audio="default" span-authority="audio"/>
+  <media:Audio id="narration-setup" src="../assets/narration/setup.m4a"/>
+  <mediaop:Normalize id="narration-setup-media" source={narration-setup} clock={clock} video="none" audio="default" span-authority="audio"/>
+  <media:Audio id="narration-scripting" src="../assets/narration/scripting.m4a"/>
+  <mediaop:Normalize id="narration-scripting-media" source={narration-scripting} clock={clock} video="none" audio="default" span-authority="audio"/>
+  <media:Audio id="narration-build" src="../assets/narration/build.m4a"/>
+  <mediaop:Normalize id="narration-build-media" source={narration-build} clock={clock} video="none" audio="default" span-authority="audio"/>
+  <media:Audio id="narration-verify" src="../assets/narration/verify.m4a"/>
+  <mediaop:Normalize id="narration-verify-media" source={narration-verify} clock={clock} video="none" audio="default" span-authority="audio"/>
+  <media:Audio id="narration-case" src="../assets/narration/case.m4a"/>
+  <mediaop:Normalize id="narration-case-media" source={narration-case} clock={clock} video="none" audio="default" span-authority="audio"/>
+  <media:Audio id="narration-output" src="../assets/narration/output.m4a"/>
+  <mediaop:Normalize id="narration-output-media" source={narration-output} clock={clock} video="none" audio="default" span-authority="audio"/>
+  <media:Audio id="narration-close" src="../assets/narration/close.m4a"/>
+  <mediaop:Normalize id="narration-close-media" source={narration-close} clock={clock} video="none" audio="default" span-authority="audio"/>
+  <!-- B-roll: each clip is a normal source the picture track can cut to. -->
+  <media:Video id="cold-open-b1-source" src="../assets/broll/cold-open-b1.mp4"/>
+  <mediaop:Normalize id="cold-open-b1-media" source={cold-open-b1-source} clock={clock} video="primary-moving" audio="none" span-authority="video"/>
+  <media:Video id="cold-open-b2-source" src="../assets/broll/cold-open-b2.mp4"/>
+  <mediaop:Normalize id="cold-open-b2-media" source={cold-open-b2-source} clock={clock} video="primary-moving" audio="none" span-authority="video"/>
+  <media:Video id="results-b1-source" src="../assets/broll/results-b1.mp4"/>
+  <mediaop:Normalize id="results-b1-media" source={results-b1-source} clock={clock} video="primary-moving" audio="none" span-authority="video"/>
+  <media:Video id="context-b1-source" src="../assets/broll/context-b1.mp4"/>
+  <mediaop:Normalize id="context-b1-media" source={context-b1-source} clock={clock} video="primary-moving" audio="none" span-authority="video"/>
+  <media:Video id="setup-b1-source" src="../assets/broll/setup-b1.mp4"/>
+  <mediaop:Normalize id="setup-b1-media" source={setup-b1-source} clock={clock} video="primary-moving" audio="none" span-authority="video"/>
+  <media:Video id="scripting-b1-source" src="../assets/broll/scripting-b1.mp4"/>
+  <mediaop:Normalize id="scripting-b1-media" source={scripting-b1-source} clock={clock} video="primary-moving" audio="none" span-authority="video"/>
+  <media:Video id="scripting-b2-source" src="../assets/broll/scripting-b2.mp4"/>
+  <mediaop:Normalize id="scripting-b2-media" source={scripting-b2-source} clock={clock} video="primary-moving" audio="none" span-authority="video"/>
+  <media:Video id="scripting-b3-source" src="../assets/broll/scripting-b3.mp4"/>
+  <mediaop:Normalize id="scripting-b3-media" source={scripting-b3-source} clock={clock} video="primary-moving" audio="none" span-authority="video"/>
+  <media:Video id="build-b1-source" src="../assets/broll/build-b1.mp4"/>
+  <mediaop:Normalize id="build-b1-media" source={build-b1-source} clock={clock} video="primary-moving" audio="none" span-authority="video"/>
+  <media:Video id="build-b2-source" src="../assets/broll/build-b2.mp4"/>
+  <mediaop:Normalize id="build-b2-media" source={build-b2-source} clock={clock} video="primary-moving" audio="none" span-authority="video"/>
+  <media:Video id="build-b3-source" src="../assets/broll/build-b3.mp4"/>
+  <mediaop:Normalize id="build-b3-media" source={build-b3-source} clock={clock} video="primary-moving" audio="none" span-authority="video"/>
+  <media:Video id="verify-b1-source" src="../assets/broll/verify-b1.mp4"/>
+  <mediaop:Normalize id="verify-b1-media" source={verify-b1-source} clock={clock} video="primary-moving" audio="none" span-authority="video"/>
+  <media:Video id="case-b1-source" src="../assets/broll/case-b1.mp4"/>
+  <mediaop:Normalize id="case-b1-media" source={case-b1-source} clock={clock} video="primary-moving" audio="none" span-authority="video"/>
+  <media:Video id="output-b1-source" src="../assets/broll/output-b1.mp4"/>
+  <mediaop:Normalize id="output-b1-media" source={output-b1-source} clock={clock} video="primary-moving" audio="none" span-authority="video"/>
+  <media:Video id="close-b1-source" src="../assets/broll/close-b1.mp4"/>
+  <mediaop:Normalize id="close-b1-media" source={close-b1-source} clock={clock} video="primary-moving" audio="none" span-authority="video"/>
+  <!-- Alignment: each section's words projected onto its own audio. -->
+  <whisperx:Alignment id="align-cold-open" narrative={story} segment={story.segment.cold-open} media={narration-cold-open-media.media} domain={narration-cold-open-media.domain} language="en"/>
+  <whisperx:Alignment id="align-results" narrative={story} segment={story.segment.results} media={narration-results-media.media} domain={narration-results-media.domain} language="en"/>
+  <whisperx:Alignment id="align-context" narrative={story} segment={story.segment.context} media={narration-context-media.media} domain={narration-context-media.domain} language="en"/>
+  <whisperx:Alignment id="align-setup" narrative={story} segment={story.segment.setup} media={narration-setup-media.media} domain={narration-setup-media.domain} language="en"/>
+  <whisperx:Alignment id="align-scripting" narrative={story} segment={story.segment.scripting} media={narration-scripting-media.media} domain={narration-scripting-media.domain} language="en"/>
+  <whisperx:Alignment id="align-build" narrative={story} segment={story.segment.build} media={narration-build-media.media} domain={narration-build-media.domain} language="en"/>
+  <whisperx:Alignment id="align-verify" narrative={story} segment={story.segment.verify} media={narration-verify-media.media} domain={narration-verify-media.domain} language="en"/>
+  <whisperx:Alignment id="align-case" narrative={story} segment={story.segment.case} media={narration-case-media.media} domain={narration-case-media.domain} language="en"/>
+  <whisperx:Alignment id="align-output" narrative={story} segment={story.segment.output} media={narration-output-media.media} domain={narration-output-media.domain} language="en"/>
+  <whisperx:Alignment id="align-close" narrative={story} segment={story.segment.close} media={narration-close-media.media} domain={narration-close-media.domain} language="en"/>
+  <!-- Timeline: one window per section, laid end to end. -->
+  <time:Timeline id="program" clock={clock} end="close.end+2s">
+    <time:Window id="cold-open" from="start" for={narration-cold-open-media.extent}/>
+    <time:Window id="results" from="cold-open.end" for={narration-results-media.extent}/>
+    <time:Window id="context" from="results.end" for={narration-context-media.extent}/>
+    <time:Window id="setup" from="context.end" for={narration-setup-media.extent}/>
+    <time:Window id="scripting" from="setup.end" for={narration-scripting-media.extent}/>
+    <time:Window id="build" from="scripting.end" for={narration-build-media.extent}/>
+    <time:Window id="verify" from="build.end" for={narration-verify-media.extent}/>
+    <time:Window id="case" from="verify.end" for={narration-case-media.extent}/>
+    <time:Window id="output" from="case.end" for={narration-output-media.extent}/>
+    <time:Window id="close" from="output.end" for={narration-close-media.extent}/>
+    <time:Window id="shot-cold-open-b1" from="cold-open.start" for="4s"/>
+    <time:Window id="shot-cold-open-b2" from="cold-open.start+25s" for="4s"/>
+    <time:Window id="shot-results-b1" from="results.start" for="4s"/>
+    <time:Window id="shot-context-b1" from="context.start" for="4s"/>
+    <time:Window id="shot-setup-b1" from="setup.start" for="4s"/>
+    <time:Window id="shot-scripting-b1" from="scripting.start" for="4s"/>
+    <time:Window id="shot-scripting-b2" from="scripting.start+72s" for="4s"/>
+    <time:Window id="shot-scripting-b3" from="scripting.start+144s" for="4s"/>
+    <time:Window id="shot-build-b1" from="build.start" for="4s"/>
+    <time:Window id="shot-build-b2" from="build.start+82s" for="4s"/>
+    <time:Window id="shot-build-b3" from="build.start+164s" for="4s"/>
+    <time:Window id="shot-verify-b1" from="verify.start" for="4s"/>
+    <time:Window id="shot-case-b1" from="case.start" for="4s"/>
+    <time:Window id="shot-output-b1" from="output.start" for="4s"/>
+    <time:Window id="shot-close-b1" from="close.start" for="4s"/>
+  </time:Timeline>
+  <!-- Projection: words now have a position on the timeline. -->
+  <semantic:Projection id="story-time" narrative={story} timeline={program.timeline}>
+    <semantic:Map alignment={align-cold-open.alignment} domain={narration-cold-open-media.domain} window={program.cold-open}/>
+    <semantic:Map alignment={align-results.alignment} domain={narration-results-media.domain} window={program.results}/>
+    <semantic:Map alignment={align-context.alignment} domain={narration-context-media.domain} window={program.context}/>
+    <semantic:Map alignment={align-setup.alignment} domain={narration-setup-media.domain} window={program.setup}/>
+    <semantic:Map alignment={align-scripting.alignment} domain={narration-scripting-media.domain} window={program.scripting}/>
+    <semantic:Map alignment={align-build.alignment} domain={narration-build-media.domain} window={program.build}/>
+    <semantic:Map alignment={align-verify.alignment} domain={narration-verify-media.domain} window={program.verify}/>
+    <semantic:Map alignment={align-case.alignment} domain={narration-case-media.domain} window={program.case}/>
+    <semantic:Map alignment={align-output.alignment} domain={narration-output-media.domain} window={program.output}/>
+    <semantic:Map alignment={align-close.alignment} domain={narration-close-media.domain} window={program.close}/>
+  </semantic:Projection>
+  <!-- Sound: the narration, plus any music bed. -->
+  <audio:Track id="narration-sound" timeline={program.timeline}>
+    <audio:Clip id="narration-cold-open" source={narration-cold-open-media.media} during={program.cold-open}/>
+    <audio:Clip id="narration-results" source={narration-results-media.media} during={program.results}/>
+    <audio:Clip id="narration-context" source={narration-context-media.media} during={program.context}/>
+    <audio:Clip id="narration-setup" source={narration-setup-media.media} during={program.setup}/>
+    <audio:Clip id="narration-scripting" source={narration-scripting-media.media} during={program.scripting}/>
+    <audio:Clip id="narration-build" source={narration-build-media.media} during={program.build}/>
+    <audio:Clip id="narration-verify" source={narration-verify-media.media} during={program.verify}/>
+    <audio:Clip id="narration-case" source={narration-case-media.media} during={program.case}/>
+    <audio:Clip id="narration-output" source={narration-output-media.media} during={program.output}/>
+    <audio:Clip id="narration-close" source={narration-close-media.media} during={program.close}/>
+  </audio:Track>
+  <!-- Picture: B-roll sits under the narration, caption sits above it. -->
+  <visual:Track id="picture" timeline={program.timeline}>
+    <visual:Clip id="shot-cold-open-b1" media={cold-open-b1-media.media} during={program.shot-cold-open-b1} frame={full} z="0" fit="cover"/>
+    <visual:Clip id="shot-cold-open-b2" media={cold-open-b2-media.media} during={program.shot-cold-open-b2} frame={full} z="0" fit="cover"/>
+    <visual:Clip id="shot-results-b1" media={results-b1-media.media} during={program.shot-results-b1} frame={full} z="0" fit="cover"/>
+    <visual:Clip id="shot-context-b1" media={context-b1-media.media} during={program.shot-context-b1} frame={full} z="0" fit="cover"/>
+    <visual:Clip id="shot-setup-b1" media={setup-b1-media.media} during={program.shot-setup-b1} frame={full} z="0" fit="cover"/>
+    <visual:Clip id="shot-scripting-b1" media={scripting-b1-media.media} during={program.shot-scripting-b1} frame={full} z="0" fit="cover"/>
+    <visual:Clip id="shot-scripting-b2" media={scripting-b2-media.media} during={program.shot-scripting-b2} frame={full} z="0" fit="cover"/>
+    <visual:Clip id="shot-scripting-b3" media={scripting-b3-media.media} during={program.shot-scripting-b3} frame={full} z="0" fit="cover"/>
+    <visual:Clip id="shot-build-b1" media={build-b1-media.media} during={program.shot-build-b1} frame={full} z="0" fit="cover"/>
+    <visual:Clip id="shot-build-b2" media={build-b2-media.media} during={program.shot-build-b2} frame={full} z="0" fit="cover"/>
+    <visual:Clip id="shot-build-b3" media={build-b3-media.media} during={program.shot-build-b3} frame={full} z="0" fit="cover"/>
+    <visual:Clip id="shot-verify-b1" media={verify-b1-media.media} during={program.shot-verify-b1} frame={full} z="0" fit="cover"/>
+    <visual:Clip id="shot-case-b1" media={case-b1-media.media} during={program.shot-case-b1} frame={full} z="0" fit="cover"/>
+    <visual:Clip id="shot-output-b1" media={output-b1-media.media} during={program.shot-output-b1} frame={full} z="0" fit="cover"/>
+    <visual:Clip id="shot-close-b1" media={close-b1-media.media} during={program.shot-close-b1} frame={full} z="0" fit="cover"/>
+  </visual:Track>
+  <!-- Caption: spoken text, word-anchored, karaoke by default. -->
+  <fonts:Face id="caption-font" package="@fontsource-variable/inter" weight="800" style="normal"/>
+  <caption-fine:Style id="primary-caption" recipe={look.caption.primary} font={caption-font}/>
+  <narrative-caption:Timing id="story-captions" document={story.caption} binding={story.caption-binding} projection={story-time}/>
+  <caption-fine:Caption id="captions" document={story.caption} timing={story-captions} timeline={program.timeline} within={canvas.bounds}>
+    <caption-fine:Use style={primary-caption}/>
+  </caption-fine:Caption>
+  <!-- Film and render. -->
+  <film:Film id="main" canvas={canvas.canvas} timeline={program.timeline} appearance={look.film.main}>
+    <film:Track source={picture.visual}/>
+    <film:Track source={narration-sound.audio}/>
+    <film:Track source={captions.visual}/>
+  </film:Film>
+  <html:Video id="final" composition={main.composition} timeline={program.timeline}/>
+</svml>

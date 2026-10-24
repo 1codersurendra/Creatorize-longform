@@ -1,0 +1,542 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-23T20:27:54.010Z",
+  "source": {
+    "url": "https://www.youtube.com/@thegruss-i8w",
+    "handle": "thegruss-i8w",
+    "channelId": "UCXvdrBvoz_T36afkGrgIHfg"
+  },
+  "channel": {
+    "name": "g russ",
+    "handle": "@thegruss-i8w",
+    "description": "👇 Join Now\n"
+  },
+  "catalogue": {
+    "videoCount": 30,
+    "titledCount": 30,
+    "durations": {
+      "count": 30,
+      "min": 506,
+      "p25": 815,
+      "median": 1054,
+      "p75": 1513,
+      "max": 10814,
+      "mean": 1476
+    },
+    "formats": {
+      "short": {
+        "count": 0,
+        "sample": []
+      },
+      "medium": {
+        "count": 11,
+        "sample": [
+          {
+            "id": "VdEbqAAwq8U",
+            "title": "How I Make Viral 3D Shorts With AI (Creatorize Guide)",
+            "duration": "12:14"
+          },
+          {
+            "id": "PKvfrAIhYTo",
+            "title": "I tested Opus 5.5 For Youtube Shorts At Every Effort Level",
+            "duration": "13:38"
+          },
+          {
+            "id": "juMQ_mHKbb0",
+            "title": "Opus 5.5 + Cretorize = VIRAL Faceless Documentaries On FULL Autopilot!",
+            "duration": "14:30"
+          },
+          {
+            "id": "BVVD26jnv0M",
+            "title": "How To Make INSANE Viral 3D Shorts With AI (Full Guide)",
+            "duration": "8:50"
+          },
+          {
+            "id": "A8C_Sw-wNok",
+            "title": "Make VIRAL Faceless 3D Documentaries With Opus 5.5 + Creatorize (Full Guide)",
+            "duration": "13:35"
+          }
+        ]
+      },
+      "long": {
+        "count": 18,
+        "sample": [
+          {
+            "id": "xj1WSzC0VfA",
+            "title": "Opus 5.5 + Creatorize = MEGA Viral Stickman Animations! (Step-by-Step Guide)",
+            "duration": "25:29"
+          },
+          {
+            "id": "L91urcNbspU",
+            "title": "Opus 5.5 Made Youtube Shorts Automation Too Easy... (Diabolical)",
+            "duration": "17:34"
+          },
+          {
+            "id": "LRsrTzmgGNQ",
+            "title": "Opus 5.5 + Creatorize = GIGA Viral Youtube Shorts On Autopilot!",
+            "duration": "29:09"
+          },
+          {
+            "id": "z9XflLHoMdg",
+            "title": "Opus 5.5 + Creatorize = MEGA Viral 3D Cartoon Animations! (Step-by-Step Guide)",
+            "duration": "35:15"
+          },
+          {
+            "id": "a-HK6Wu0PSU",
+            "title": "Creatorize + Claude = 26 Minute Documentaries For $0!",
+            "duration": "33:49"
+          },
+          {
+            "id": "LgpWOqPjQPg",
+            "title": "Creatorize + Opus 5.5 = CRAZY 3D Crime Documentaries in Minutes! (Step-by-Step)",
+            "duration": "24:22"
+          },
+          {
+            "id": "FpHBK2NAc6Y",
+            "title": "Creatorize + Opus 5.5 = INSANE 3D Youtube Shorts (Full Guide)",
+            "duration": "17:08"
+          },
+          {
+            "id": "b5K0jwPOc5E",
+            "title": "How I Actually Automated Faceless AI Youtube Videos (Step-By-Step)",
+            "duration": "23:25"
+          }
+        ]
+      },
+      "livestream": {
+        "count": 1,
+        "sample": [
+          {
+            "id": "yCrPX0k2TXQ",
+            "title": "AI YTA FULL COURSE 3 Hours: Creatorize + Claude (Faceless Documentary Masterclass 2026)",
+            "duration": "3:00:14"
+          }
+        ]
+      }
+    },
+    "titleFormulas": [
+      {
+        "formula": "<MODEL> + <PRODUCT> = <INTENS> <TOPIC>",
+        "count": 11
+      },
+      {
+        "formula": "How <N> <TOPIC>",
+        "count": 4
+      },
+      {
+        "formula": "<MODEL> <TOPIC>",
+        "count": 3
+      },
+      {
+        "formula": "<PRODUCT> + <MODEL> = <INTENS> <TOPIC>",
+        "count": 3
+      },
+      {
+        "formula": "How To Make <INTENS> <TOPIC>",
+        "count": 2
+      }
+    ],
+    "topicClusters": [
+      {
+        "term": "opus",
+        "count": 20
+      },
+      {
+        "term": "creatorize",
+        "count": 17
+      },
+      {
+        "term": "faceless",
+        "count": 13
+      },
+      {
+        "term": "documentaries",
+        "count": 10
+      },
+      {
+        "term": "viral",
+        "count": 9
+      },
+      {
+        "term": "youtube",
+        "count": 9
+      },
+      {
+        "term": "insane",
+        "count": 7
+      },
+      {
+        "term": "step-by-step",
+        "count": 6
+      },
+      {
+        "term": "shorts",
+        "count": 6
+      },
+      {
+        "term": "make",
+        "count": 5
+      },
+      {
+        "term": "claude",
+        "count": 4
+      },
+      {
+        "term": "videos",
+        "count": 4
+      },
+      {
+        "term": "channel",
+        "count": 4
+      },
+      {
+        "term": "crazy",
+        "count": 3
+      },
+      {
+        "term": "minutes",
+        "count": 3
+      },
+      {
+        "term": "automated",
+        "count": 3
+      },
+      {
+        "term": "sonnet",
+        "count": 3
+      },
+      {
+        "term": "mega",
+        "count": 2
+      },
+      {
+        "term": "animations",
+        "count": 2
+      },
+      {
+        "term": "autopilot",
+        "count": 2
+      },
+      {
+        "term": "documentary",
+        "count": 2
+      },
+      {
+        "term": "explainer",
+        "count": 2
+      },
+      {
+        "term": "fully",
+        "count": 2
+      },
+      {
+        "term": "editing",
+        "count": 2
+      }
+    ],
+    "videos": [
+      {
+        "id": "xj1WSzC0VfA",
+        "title": "Opus 5.5 + Creatorize = MEGA Viral Stickman Animations! (Step-by-Step Guide)",
+        "duration": "25:29",
+        "durationSeconds": 1529,
+        "views": "1.4K",
+        "published": "4 hours ago",
+        "url": "https://www.youtube.com/watch?v=xj1WSzC0VfA"
+      },
+      {
+        "id": "VdEbqAAwq8U",
+        "title": "How I Make Viral 3D Shorts With AI (Creatorize Guide)",
+        "duration": "12:14",
+        "durationSeconds": 734,
+        "views": "4.6K",
+        "published": "22 hours ago",
+        "url": "https://www.youtube.com/watch?v=VdEbqAAwq8U"
+      },
+      {
+        "id": "PKvfrAIhYTo",
+        "title": "I tested Opus 5.5 For Youtube Shorts At Every Effort Level",
+        "duration": "13:38",
+        "durationSeconds": 818,
+        "views": "6.9K",
+        "published": "1 day ago",
+        "url": "https://www.youtube.com/watch?v=PKvfrAIhYTo"
+      },
+      {
+        "id": "L91urcNbspU",
+        "title": "Opus 5.5 Made Youtube Shorts Automation Too Easy... (Diabolical)",
+        "duration": "17:34",
+        "durationSeconds": 1054,
+        "views": "13K",
+        "published": "2 days ago",
+        "url": "https://www.youtube.com/watch?v=L91urcNbspU"
+      },
+      {
+        "id": "LRsrTzmgGNQ",
+        "title": "Opus 5.5 + Creatorize = GIGA Viral Youtube Shorts On Autopilot!",
+        "duration": "29:09",
+        "durationSeconds": 1749,
+        "views": "12K",
+        "published": "4 days ago",
+        "url": "https://www.youtube.com/watch?v=LRsrTzmgGNQ"
+      },
+      {
+        "id": "z9XflLHoMdg",
+        "title": "Opus 5.5 + Creatorize = MEGA Viral 3D Cartoon Animations! (Step-by-Step Guide)",
+        "duration": "35:15",
+        "durationSeconds": 2115,
+        "views": "49K",
+        "published": "5 days ago",
+        "url": "https://www.youtube.com/watch?v=z9XflLHoMdg"
+      },
+      {
+        "id": "a-HK6Wu0PSU",
+        "title": "Creatorize + Claude = 26 Minute Documentaries For $0!",
+        "duration": "33:49",
+        "durationSeconds": 2029,
+        "views": "2.5K",
+        "published": "6 days ago",
+        "url": "https://www.youtube.com/watch?v=a-HK6Wu0PSU"
+      },
+      {
+        "id": "juMQ_mHKbb0",
+        "title": "Opus 5.5 + Cretorize = VIRAL Faceless Documentaries On FULL Autopilot!",
+        "duration": "14:30",
+        "durationSeconds": 870,
+        "views": "2.7K",
+        "published": "7 days ago",
+        "url": "https://www.youtube.com/watch?v=juMQ_mHKbb0"
+      },
+      {
+        "id": "BVVD26jnv0M",
+        "title": "How To Make INSANE Viral 3D Shorts With AI (Full Guide)",
+        "duration": "8:50",
+        "durationSeconds": 530,
+        "views": "3.6K",
+        "published": "7 days ago",
+        "url": "https://www.youtube.com/watch?v=BVVD26jnv0M"
+      },
+      {
+        "id": "A8C_Sw-wNok",
+        "title": "Make VIRAL Faceless 3D Documentaries With Opus 5.5 + Creatorize (Full Guide)",
+        "duration": "13:35",
+        "durationSeconds": 815,
+        "views": "4.2K",
+        "published": "8 days ago",
+        "url": "https://www.youtube.com/watch?v=A8C_Sw-wNok"
+      },
+      {
+        "id": "LgpWOqPjQPg",
+        "title": "Creatorize + Opus 5.5 = CRAZY 3D Crime Documentaries in Minutes! (Step-by-Step)",
+        "duration": "24:22",
+        "durationSeconds": 1462,
+        "views": "5.2K",
+        "published": "9 days ago",
+        "url": "https://www.youtube.com/watch?v=LgpWOqPjQPg"
+      },
+      {
+        "id": "FpHBK2NAc6Y",
+        "title": "Creatorize + Opus 5.5 = INSANE 3D Youtube Shorts (Full Guide)",
+        "duration": "17:08",
+        "durationSeconds": 1028,
+        "views": "8.5K",
+        "published": "10 days ago",
+        "url": "https://www.youtube.com/watch?v=FpHBK2NAc6Y"
+      },
+      {
+        "id": "b5K0jwPOc5E",
+        "title": "How I Actually Automated Faceless AI Youtube Videos (Step-By-Step)",
+        "duration": "23:25",
+        "durationSeconds": 1405,
+        "views": "3K",
+        "published": "11 days ago",
+        "url": "https://www.youtube.com/watch?v=b5K0jwPOc5E"
+      },
+      {
+        "id": "yCrPX0k2TXQ",
+        "title": "AI YTA FULL COURSE 3 Hours: Creatorize + Claude (Faceless Documentary Masterclass 2026)",
+        "duration": "3:00:14",
+        "durationSeconds": 10814,
+        "views": "6.6K",
+        "published": "13 days ago",
+        "url": "https://www.youtube.com/watch?v=yCrPX0k2TXQ"
+      },
+      {
+        "id": "MWUoOFCAKCU",
+        "title": "Sonnet 5.5 + Creatorize = EASY Faceless 3D Documentaries (Full Guide)",
+        "duration": "20:25",
+        "durationSeconds": 1225,
+        "views": "6.6K",
+        "published": "13 days ago",
+        "url": "https://www.youtube.com/watch?v=MWUoOFCAKCU"
+      },
+      {
+        "id": "u0Vkkmf4Ktg",
+        "title": "Haiku 5.5 + Creatorize = CRAZY 3D Documentaries For $0! (Step-by-Step Guide)",
+        "duration": "17:23",
+        "durationSeconds": 1043,
+        "views": "10K",
+        "published": "2 weeks ago",
+        "url": "https://www.youtube.com/watch?v=u0Vkkmf4Ktg"
+      },
+      {
+        "id": "n1ElZoPmgck",
+        "title": "Creatorize + Opus 5.5 = Insane 3D Documentaries For $0! (Full Guide)",
+        "duration": "31:40",
+        "durationSeconds": 1900,
+        "views": "19K",
+        "published": "2 weeks ago",
+        "url": "https://www.youtube.com/watch?v=n1ElZoPmgck"
+      },
+      {
+        "id": "CF6azV3z874",
+        "title": "How To Make Viral Paint Explainer Videos With AI With $0 (Full Guide)",
+        "duration": "15:54",
+        "durationSeconds": 954,
+        "views": "6.3K",
+        "published": "2 weeks ago",
+        "url": "https://www.youtube.com/watch?v=CF6azV3z874"
+      },
+      {
+        "id": "yUdmzM0esAM",
+        "title": "Opus 5.5 + Creatorize = LAZIEST Way to Make Money With AI",
+        "duration": "17:45",
+        "durationSeconds": 1065,
+        "views": "4.6K",
+        "published": "2 weeks ago",
+        "url": "https://www.youtube.com/watch?v=yUdmzM0esAM"
+      },
+      {
+        "id": "0Kb7mqg4G6w",
+        "title": "Opus 5.5 + Creatorize = Fully Automated Faceless Youtube Channel (Crazy)",
+        "duration": "11:27",
+        "durationSeconds": 687,
+        "views": "1.4K",
+        "published": "2 weeks ago",
+        "url": "https://www.youtube.com/watch?v=0Kb7mqg4G6w"
+      },
+      {
+        "id": "IcKSsh-20d8",
+        "title": "Sonnet 5.5 + Creatorize = Insane Faceless Videos (Full Speedrun)",
+        "duration": "11:28",
+        "durationSeconds": 688,
+        "views": "2.7K",
+        "published": "2 weeks ago",
+        "url": "https://www.youtube.com/watch?v=IcKSsh-20d8"
+      },
+      {
+        "id": "EjBaBoU3rUM",
+        "title": "Opus 5.5 + Creatorize = Insane Faceless Explainer Videos (Full Guide)",
+        "duration": "14:18",
+        "durationSeconds": 858,
+        "views": "6.1K",
+        "published": "2 weeks ago",
+        "url": "https://www.youtube.com/watch?v=EjBaBoU3rUM"
+      },
+      {
+        "id": "9_ObqJlRNKw",
+        "title": "Opus 5.5 + Creatorize = Insane Faceless Documentaries In Minutes!",
+        "duration": "25:04",
+        "durationSeconds": 1504,
+        "views": "13K",
+        "published": "3 weeks ago",
+        "url": "https://www.youtube.com/watch?v=9_ObqJlRNKw"
+      },
+      {
+        "id": "Ntea4FbIX7I",
+        "title": "Build a VIRAL Faceless Youtube Channel With Opus 5.5 (Step-by-step)",
+        "duration": "25:13",
+        "durationSeconds": 1513,
+        "views": "7K",
+        "published": "3 weeks ago",
+        "url": "https://www.youtube.com/watch?v=Ntea4FbIX7I"
+      },
+      {
+        "id": "olqCCtKFgL4",
+        "title": "How Sonnet 5.5 Killed Video Editing (Insane Results)",
+        "duration": "17:16",
+        "durationSeconds": 1036,
+        "views": "16K",
+        "published": "3 weeks ago",
+        "url": "https://www.youtube.com/watch?v=olqCCtKFgL4"
+      },
+      {
+        "id": "kzkLYVRN2PE",
+        "title": "Opus 5.5 + Three.js Edits Documentaries In Minutes! (Full Tutorial)",
+        "duration": "8:26",
+        "durationSeconds": 506,
+        "views": "1.4K",
+        "published": "3 weeks ago",
+        "url": "https://www.youtube.com/watch?v=kzkLYVRN2PE"
+      },
+      {
+        "id": "7ehRVy3KHA0",
+        "title": "How Opus 5.5 Solved Faceless Youtube Documentaries (Full Guide)",
+        "duration": "13:12",
+        "durationSeconds": 792,
+        "views": "1.2K",
+        "published": "3 weeks ago",
+        "url": "https://www.youtube.com/watch?v=7ehRVy3KHA0"
+      },
+      {
+        "id": "Hr2nFE5VIfQ",
+        "title": "How Opus 5.5 Runs a Faceless Documentary Channel (Fully Automated)",
+        "duration": "13:20",
+        "durationSeconds": 800,
+        "views": "937",
+        "published": "3 weeks ago",
+        "url": "https://www.youtube.com/watch?v=Hr2nFE5VIfQ"
+      },
+      {
+        "id": "hvNC8UnZXAs",
+        "title": "Claude Opus 5.5 Just Changed Talking Head Editing Forever",
+        "duration": "18:37",
+        "durationSeconds": 1117,
+        "views": "1.1K",
+        "published": "4 weeks ago",
+        "url": "https://www.youtube.com/watch?v=hvNC8UnZXAs"
+      },
+      {
+        "id": "8m6-EmYW2zQ",
+        "title": "How Claude Opus 5.5 Can Run a 24.5k/Mo Faceless Youtube Channel",
+        "duration": "27:33",
+        "durationSeconds": 1653,
+        "views": "3.7K",
+        "published": "4 weeks ago",
+        "url": "https://www.youtube.com/watch?v=8m6-EmYW2zQ"
+      }
+    ]
+  },
+  "longform": {
+    "band": {
+      "count": 19,
+      "min": 954,
+      "p25": 1054,
+      "median": 1462,
+      "p75": 1749,
+      "max": 10814,
+      "recommendedTargetSeconds": 1462
+    },
+    "dominantStyle": [
+      "3d-animation",
+      "flat-explainer",
+      "documentary",
+      "short-form",
+      "long-form"
+    ]
+  },
+  "web": {
+    "ok": true,
+    "cdpEndpoint": "http://127.0.0.1:39453",
+    "targetId": "97813A4465C0E67D3ACB6A64770EAA8B",
+    "evidenceFile": "/run/csi/mount-root/nas/eab0d61a99b6696edb3d2aff87b585e8/creatorize/evidence/web-thegruss-i8w.json",
+    "summary": {
+      "domNodes": 5145,
+      "accessibilityNodes": 1371,
+      "networkRequests": 9,
+      "resources": 16,
+      "completeness": "policy_filtered",
+      "limitations": 5
+    }
+  }
+}
